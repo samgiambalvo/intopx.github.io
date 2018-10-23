@@ -1,0 +1,79 @@
+.html, body, p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  font-family: SF UI Text;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #101012;
+  color: white;
+}
+
+.container-left, .container-right {
+  width: 45.3vw;
+  height: 100%;
+  border-left: 2px solid #333339;
+  border-right: 2px solid #333339;
+  position: absolute;
+}
+
+.container-top, .container-bottom {
+  border-top: 2px solid #333339;
+  border-bottom: 2px solid #333339;
+}
+
+.action h1 {
+  font-size: 8vw;
+  font-weight: 100;
+  font-family: SF UI Display;
+  padding: 7.5vw 0 2vw 2.9vw;
+  display: inline-block;
+}
+
+.action p {
+  display: inline-block;
+  font-size: 2.25vw;
+  font-weight: 100;
+  padding-left: 2vw;
+}
+
+.container-actions {
+  position: absolute;
+  height: 75%;
+  height: 41.55vw;
+  width: 94%;
+  left: 0; right: 0;
+  margin: auto;
+  bottom: 3vw;
+}
+
+.container-left {
+  left: 3vw;
+}
+
+.container-right {
+  right: 3vw;
+}
+
+.container-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.action {
+  width: 48.6%;
+}
+
+.inchW {
+  display: inline-block;
+}
+
+.inchH {
+  float: right;
+}
+
