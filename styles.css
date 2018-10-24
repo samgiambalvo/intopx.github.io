@@ -2,78 +2,131 @@
   margin: 0;
   padding: 0;
   font-family: SF UI Text;
+  font-weight: 100;
 }
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+::selection {
+  background: #37373C; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #37373C; /* Gecko Browsers */
+}
+
+p {
+  font-size: 1.5vw;
+}
 
 body {
   background-color: #101012;
   color: white;
+  overflow-x: hidden;
 }
 
-.container-left, .container-right {
-  width: 45.3vw;
-  height: 100%;
-  border-left: 2px solid #333339;
-  border-right: 2px solid #333339;
-  position: absolute;
-}
-
-.container-top, .container-bottom {
-  border-top: 2px solid #333339;
-  border-bottom: 2px solid #333339;
-}
-
-.action h1 {
-  font-size: 8vw;
-  font-weight: 100;
-  font-family: SF UI Display;
-  padding: 7.5vw 0 2vw 2.9vw;
-  display: inline-block;
-}
-
-.action p {
-  display: inline-block;
-  font-size: 2.25vw;
-  font-weight: 100;
-  padding-left: 2vw;
+.container-actions, .container-top, .container-bottom {
+  width: 100%;
 }
 
 .container-actions {
   position: absolute;
-  height: 75%;
-  height: 41.55vw;
-  width: 94%;
-  left: 0; right: 0;
-  margin: auto;
-  bottom: 3vw;
+  height: 66.66%;
+  bottom: 2px;
 }
 
-.container-left {
-  left: 3vw;
-}
-
-.container-right {
-  right: 3vw;
+.container-top, .container-bottom {
+  height: 50%;
+  height: 18vw;
+  border-top: 2px solid #22222A;
 }
 
 .container-bottom {
-  position: absolute;
   bottom: 0;
-  width: 100%;
 }
 
-.action {
-  width: 48.6%;
+.col-half {
+  width: 50%;
+  position: absolute;
 }
 
-.inchW {
+.col-half p {
   display: inline-block;
 }
 
-.inchH {
-  float: right;
+.intro, .dpi-selector {
+  margin: 3vw 0 0 3vw;
 }
+
+.dpi-selector {
+  background-color: transparent;
+  display: inline-block;
+  padding: 1vw 3vw 1vw 1vw;
+  cursor: pointer;
+  position: relative;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 8vw;
+  font-family: SF UI Display;
+  font-weight: 100;
+  line-height: 10vw;
+  padding: 6vw 0 2vw 3vw;
+  border-bottom: 2px solid transparent;
+  width: 94%;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid white;
+}
+
+.action, .dpi-selector, input {
+  transition: all 0.1s;
+}
+
+input {
+  transition: all 0.3s;
+}
+
+.action {
+  width: 50%;
+  position: absolute;
+}
+
+.action:hover, .dpi-selector:hover {
+  background-color: #19191B;
+}
+
+.inW, .pxW {
+  left: 0;
+}
+
+.inH, .pxH {
+  right: 0;
+}
+
+.action p {
+  position: absolute;
+  bottom: 3vw;
+  right: 3vw;
+}
+
+.arrow {
+  position: absolute;
+  right: 1.2vw;
+  top: 1.65vw;
+}
+
 
