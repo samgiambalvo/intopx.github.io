@@ -9,14 +9,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 ::selection {
-  background: #37373C; /* WebKit/Blink Browsers */
+  background: white; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #37373C; /* Gecko Browsers */
+  background: white; /* Gecko Browsers */
 }
 
 p {
-  font-size: 1.5vw;
+  font-size: 1.85vw;
 }
 
 body {
@@ -32,13 +32,12 @@ body {
 .container-actions {
   position: absolute;
   height: 66.66%;
-  bottom: 2px;
+  bottom: 0;
 }
 
 .container-top, .container-bottom {
-  height: 50%;
-  height: 18vw;
-  border-top: 2px solid #22222A;
+  height: 100%;
+/*  border-top: 3px solid #22222A;*/
 }
 
 .container-bottom {
@@ -78,18 +77,22 @@ input {
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 8vw;
+  font-size: 13vw;
   font-family: SF UI Display;
   font-weight: 100;
   line-height: 10vw;
-  padding: 6vw 0 2vw 3vw;
-  border-bottom: 2px solid transparent;
-  width: 94%;
+  padding: 6vw 0 2vw 6vw;
+  border-top: 3px solid #22222A;
+  width: 88%;
+}
+
+input:hover {
+  border-top: 3px solid #22222A;
 }
 
 input:focus {
   outline: none;
-  border-bottom: 2px solid white;
+  border-top: 3px solid white;
 }
 
 .action, .dpi-selector, input {
@@ -102,25 +105,31 @@ input {
 
 .action {
   width: 50%;
+  height: 100%;
   position: absolute;
 }
 
 .action:hover, .dpi-selector:hover {
-  background-color: #19191B;
+  background-color: #141416;
 }
 
-.inW, .pxW {
+.inW  {
   left: 0;
 }
 
-.inH, .pxH {
+.inH, .pxH, .pxW {
   right: 0;
+}
+
+.inW {
+  border-right: 3px solid #22222A;
 }
 
 .action p {
   position: absolute;
-  bottom: 3vw;
-  right: 3vw;
+  bottom: 4vw;
+  left: 7vw;
+  opacity: 0.5;
 }
 
 .arrow {
