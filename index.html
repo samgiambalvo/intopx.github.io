@@ -9,28 +9,19 @@
   </head>
   <body>
     
-    <div class="header">
-      <div class="col-half left">
-        <p class="intro">Convert inches to pixels.</p>
-      </div>
-      <div class="col-half right">
-        <div class="dpi-selector">
-          <p class="selected">75 dpi <img class="arrow" src="imgs/arrow.svg"/></p>
-        </div>
-      </div>
-    </div>
     <div class="container-actions">
-      <div class="container-top">
+      <div class="split"></div>
         <div class="action inW">
-          <p>inch</p>
-          <input id="inW" value="1"/>
+          <p>Inches</p>          
+          <div class="copyIn">Copy</div>
+          <input id="inW" onClick="this.select();" value="1"/>
         </div>
         <div class="action pxW">
-          <input id="pxW"type="text"value="75">
-          <p>pixels</p>
+          <p>Pixels</p>
+          <div class="copyPx">Copy</div>
+          <input id="pxW" onClick="this.select();" type="text"value="75">
         </div>
-      </div>
-
+        <div class="add"><p>Add Row</p></div>
       </div>
     </div>
   </body>

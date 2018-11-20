@@ -9,133 +9,124 @@
   -moz-osx-font-smoothing: grayscale;
 }
 ::selection {
-  background: white; /* WebKit/Blink Browsers */
+  background: #F2F1F1; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: white; /* Gecko Browsers */
+  background: #F2F1F1; /* Gecko Browsers */
 }
 
 p {
-  font-size: 1.85vw;
+  font-size: 1.25vw;
 }
 
 body {
-  background-color: #101012;
-  color: white;
+  color: #131313;
+/*  background-color: #F4F4F4;
+  background-color: #F1F3F4;*/
   overflow-x: hidden;
 }
 
-.container-actions, .container-top, .container-bottom {
-  width: 100%;
-}
-
 .container-actions {
+  width: 62.5%;
   position: absolute;
-  height: 66.66%;
-  bottom: 0;
+  height: 22.5vw;
+  left: 0; right: 0; top: 0; bottom: 0;
+  margin: auto;
+  display: table;
 }
 
-.container-top, .container-bottom {
+.split {
+  width: 2px;
+  background-color: #EBECEB;
   height: 100%;
-/*  border-top: 3px solid #22222A;*/
-}
-
-.container-bottom {
-  bottom: 0;
-}
-
-.col-half {
-  width: 50%;
   position: absolute;
-}
-
-.col-half p {
-  display: inline-block;
-}
-
-.intro, .dpi-selector {
-  margin: 3vw 0 0 3vw;
-}
-
-.dpi-selector {
-  background-color: transparent;
-  display: inline-block;
-  padding: 1vw 3vw 1vw 1vw;
-  cursor: pointer;
-  position: relative;
-}
-
-.left {
   left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
 }
 
-.right {
+.action {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  border-left: 2px solid #EBECEB;
+  background-color: white;
+}
+
+.action p {
+  padding: 1.25vw 0 1.25vw 2vw;
+  border-bottom: 2px solid #EBECEB;
+  border-top: 2px solid #EBECEB;
+  background-color: white;
+}
+
+.pxW {
+  border-left: 0;
+  border-right: 2px solid #EBECEB;
   right: 0;
 }
 
-input {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 13vw;
-  font-family: SF UI Display;
-  font-weight: 100;
-  line-height: 10vw;
-  padding: 6vw 0 2vw 6vw;
-  border-top: 3px solid #22222A;
-  width: 88%;
+.pxW p {
+  border-left: 0;
 }
 
-input:hover {
-  border-top: 3px solid #22222A;
+input {
+  width: 83%;
+  border: none;
+  font-size: 5vw;
+  padding: 2vw 2vw 5vw 2vw;
+  font-weight: 200;
+  background: transparent;
 }
 
 input:focus {
   outline: none;
-  border-top: 3px solid white;
 }
 
-.action, .dpi-selector, input {
-  transition: all 0.1s;
-}
-
-input {
-  transition: all 0.3s;
-}
-
-.action {
-  width: 50%;
-  height: 100%;
+.add {
+  bottom: 0;
+  width: 100%;
   position: absolute;
+  border: 2px solid #EBECEB;
+  cursor: pointer;
+  background-color: white;
+  z-index: 3;
 }
 
-.action:hover, .dpi-selector:hover {
-  background-color: #141416;
+.add:hover, .action:hover {
+  background-color: #FAFAFA;
 }
 
-.inW  {
-  left: 0;
+.add p {
+   padding: 1.25vw 0 1.25vw 0;
+   text-align: center;
+   font-size: 1.25vw;
 }
 
-.inH, .pxH, .pxW {
-  right: 0;
-}
-
-.inW {
-  border-right: 3px solid #22222A;
-}
-
-.action p {
+.copyIn {
   position: absolute;
-  bottom: 4vw;
-  left: 7vw;
-  opacity: 0.5;
+  right: 2.5vw;
+  top: 1.4vw;
+  z-index: 3;
+  opacity: 0;
+  font-size: 1vw;
 }
 
-.arrow {
+.copyPx {
   position: absolute;
-  right: 1.2vw;
-  top: 1.65vw;
+  right: 2.5vw;
+  top: 1.4vw;
+  z-index: 3;
+  opacity: 0;
+ font-size: 1vw;
 }
 
+.action:hover .copyIn, 
+.action:hover .copyPx 
+{
+  opacity: 1;
+}
 
